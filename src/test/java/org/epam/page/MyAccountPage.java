@@ -19,6 +19,7 @@ public class MyAccountPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div/div[1]/button[2]")
     private WebElement changePasswordButton;
 
+    @Override
     public String getTitle() {
         wait.until(ExpectedConditions.visibilityOf(myAccountTitle));
         return myAccountTitle.getText();

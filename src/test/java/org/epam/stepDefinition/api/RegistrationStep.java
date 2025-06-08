@@ -1,12 +1,9 @@
 package org.epam.stepDefinition.api;
 
-import com.energyx.contexts.APITestContext;
 import com.energyx.models.User;
 import com.github.javafaker.Faker;
-import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.Given;
-
-import java.util.ArrayList;
+import org.epam.contexts.APITestContext;
+import io.cucumber.java.en.*;
 import java.util.List;
 import java.util.Map;
 
@@ -39,10 +36,10 @@ public class RegistrationStep {
     }
 
 
-    @Given("User registration with data:")
-    public void userRegistrationWithData(DataTable dataTable) {
-        List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-    }
+//    @Given("User registration with data:")
+//    public void userRegistrationWithData(DataTable dataTable) {
+//        List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
+//    }
 
     @Given("User registration with data email {string}, firstName {string}, lastName {string}, password {string}, preferableActivity {string}, target {string}")
     public void userRegistrationWithDataEmailFirstNameLastNamePasswordPreferableActivityTarget(String email, String firstName, String lastName, String password, String preferableActivity, String target) {

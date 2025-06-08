@@ -31,5 +31,9 @@ public class ConfigReader {
         return properties.getProperty(key);
     }
 
+    public static String getBackendURI() {
+        return properties.getProperty("app.backend.uri");
+    }
+
 
 }

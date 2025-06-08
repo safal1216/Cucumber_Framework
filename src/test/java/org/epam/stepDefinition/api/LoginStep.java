@@ -1,9 +1,8 @@
 package org.epam.stepDefinition.api;
 
-import com.energyx.contexts.APITestContext;
 import com.energyx.models.User;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+import org.epam.contexts.APITestContext;
+import io.cucumber.java.en.*;
 import org.testng.Assert;
 
 public class LoginStep {

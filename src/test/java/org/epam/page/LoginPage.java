@@ -39,6 +39,7 @@ public class LoginPage extends BasePage{
         super(driver);
     }
 
+    @Override
     public String getTitle() {
         wait.until(ExpectedConditions.visibilityOf(loginPageTitle));
         return loginPageTitle.getText();

@@ -1,8 +1,7 @@
 package org.epam.stepDefinition.api;
 
-import com.energyx.contexts.APITestContext;
+import org.epam.contexts.APITestContext;
 import com.energyx.models.Workout;
-import com.energyx.utils.ConfigReader;
 import io.cucumber.java.en.*;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -13,23 +12,22 @@ import io.restassured.specification.ResponseSpecification;
 import org.testng.Assert;
 
 import java.util.List;
-
-import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static io.restassured.RestAssured.given;
+import static org.epam.utils.ConfigReader.getBackendURI;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 public class CommonSteps {
 
     private final APITestContext testContext;
-
     public CommonSteps(APITestContext context) {
         this.testContext = context;
     }
 
     @Given("Using base URL")
     public void setBaseUrl() {
-        String baseUrl = ConfigReader.getBackendURI();
+        String baseUrl = getBackendURI();
 
         if (baseUrl == null || baseUrl.trim().isEmpty()) {
             System.out.println(baseUrl);

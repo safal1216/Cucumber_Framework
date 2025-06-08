@@ -52,6 +52,7 @@ public class RegisterPage extends BasePage {
     private WebElement existingAccountLink;
 
 
+    @Override
     public String getTitle() {
         wait.until(ExpectedConditions.visibilityOf(RegisterPageTitle));
         return RegisterPageTitle.getText();
